@@ -12,27 +12,25 @@ void VectorVideoData::populate(string filename) {
 }
 
 bool VectorVideoData::exists(string title) {
-    for (int i = 0; i < data.size(); i++)
-        if (data[i].get_title() == title)
-            return true;
-    return false;
+    for (auto & i : data)
+        return (i.getTitle() == title);
 }
 
 VideoData &VectorVideoData::findByTitle(string title) {
-    for (int i = 0; i < data.size(); i++)
-        if (data[i].get_title() == title)
-            return data[i];
+    for (auto & i : data)
+        if (i.getTitle() == title)
+            return i;
 }
 
 VideoData &VectorVideoData::findByCategory(string title) {
-    for (int i = 0; i < data.size(); i++)
-        if (data[i].get_category() == title)
-            return data[i];
+    for (auto & i : data)
+        if (i.getCategory() == title)
+            return i;
 }
 
 ostream &operator<<(ostream &out, VectorVideoData &vector) {
-    for (int i = 0; i < vector.data.size(); i++)
-        out << vector.data[i] << endl;
+    for (auto & i : vector.data)
+        out << i << endl;
     return out;
 }
 

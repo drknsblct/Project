@@ -19,14 +19,24 @@ public:
 
     explicit VideoData(string title, string category = "None", int duration = 0, int size = 0);
 
+//Getters
+    string getTitle();
 
-    string get_title();
+    string getCategory();
 
-    string get_category();
+    int getDuration();
 
-    int get_duration();
+    int getSize();
 
-    int get_size();
+//Setters
+    void setTitle(string newTitle);
+
+    void setCategory(string newCategory);
+
+    void setDuration(int newDuration);
+
+    void setSize(int newSize);
+
 
     friend istream &operator>>(istream &in, VideoData &data) {
         cout << "Title: ";
@@ -47,10 +57,10 @@ public:
     friend ostream &operator<<(ostream &out, VideoData &data) {
         return out << "Title: "
                    << data.title << " || Category: "
-                   << data.category << " || Duration: "
-                   << data.duration << " || Size: "
+                   << data.category << " || Duration (min): "
+                   << data.duration << " || Size (mb): "
                    << data.size
-                   << "\n";
+                   << "\n\n";
     }
 
 };

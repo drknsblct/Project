@@ -11,18 +11,36 @@ VideoData::VideoData(string title, string category, int duration, int size) {
     this-> size = size;
 }
 
-string VideoData::get_title() {
+//Getters
+string VideoData::getTitle() {
     return this->title;
 }
 
-string VideoData::get_category() {
+string VideoData::getCategory() {
     return this->category;
 }
 
-int VideoData::get_duration() {
+int VideoData::getDuration() {
     return this->duration;
 }
 
-int VideoData::get_size() {
+int VideoData::getSize() {
     return this->size;
+}
+
+//Setters
+void VideoData::setTitle(string newTitle){
+    this->title = newTitle;
+}
+
+void VideoData::setCategory(string newCategory){
+    this->category = newCategory;
+}
+
+void VideoData::setDuration(int newDuration){
+    this->duration = newDuration;
+}
+
+void VideoData::setSize(int newSize){
+    this->size = newSize;
 }

@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/blackout/Project/gui.h">
+			<Option target="Project"/>
+		</Unit>
 		<Unit filename="/Users/blackout/Project/main.cpp">
 			<Option target="Project"/>
 		</Unit>
