@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 
-
+//na to kaneis na grafei se arxeio
     Gui gui;
     gui.menu();
 

@@ -10,6 +10,7 @@ using namespace std;
 class Gui {
 public:
     vector<VideoData> data;
+    VectorVideoData
 
     void addVideos() {
         int count = 0;
@@ -91,11 +92,28 @@ public:
         }
         return total;
     }
+    int averageSize(){
+        int avg = 0;
+        for (VideoData &e : data){
+            avg = totalSize() / data.size();
+        }
+        return avg;
+    }
+
+    int averageDuration(){
+        int avg = 0;
+        for (VideoData &e : data){
+            avg = totalMinutes() / data.size();
+        }
+        return avg;
+    }
 
     void showStats(){
         cout << "Videos in the list: " << data.size() << "\n";
         cout << "Total minutes: " << totalMinutes() << "\n";
         cout << "Total size: " << totalSize() << "\n";
+        cout << "Average duration: " << averageDuration() << "\n";
+        cout << "Average size: " << averageSize() << "\n";
     }
 
 
