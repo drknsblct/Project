@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/blackout/Project/main.cpp
+iostream
+-
+vectordata.h
+/Users/blackout/Project/vectordata.h
+videodata.h
+/Users/blackout/Project/videodata.h
+
+/Users/blackout/Project/vectordata.cpp
+vectordata.h
+/Users/blackout/Project/vectordata.h
+
+/Users/blackout/Project/vectordata.h
+iostream
+-
+fstream
+-
+vector
+-
+videodata.h
+/Users/blackout/Project/videodata.h
+
+/Users/blackout/Project/videodata.cpp
+videodata.h
+/Users/blackout/Project/videodata.h
+
+/Users/blackout/Project/videodata.h
+iostream
+-
+fstream
+-
+
