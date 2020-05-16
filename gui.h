@@ -12,15 +12,12 @@ class Gui {
 public:
     vector<VideoData> data;
 
-
     void writeToFile(vector<VideoData> data) {
         ofstream file("videos.txt");
         for (auto &i : data) {
             file << i;
         }
-
     }
-
 
     void addVideos() {
         int count = 0;
@@ -99,8 +96,8 @@ public:
                 cin >> index;
                 cin.ignore();
                 if (index == data.size()){
-                    cout << "There's no such index\n";
-                    break;
+                    cout << "There's no such index\n\n";
+                    return;
                 }
                 cout << data[index] << endl;
 
