@@ -11,8 +11,15 @@ using namespace std;
 class Gui {
 public:
     vector<VideoData> data;
-//    ifstream  infile;
-//    infile.open(videos.txt);
+
+
+    void writeToFile(vector<VideoData> data) {
+        ofstream file("videos.txt");
+        for (auto &i : data) {
+            file << i;
+        }
+
+    }
 
 
     void addVideos() {
@@ -20,7 +27,6 @@ public:
         cout << "Enter the amount of videos you want to add: ";
         cin >> count;
         cin.ignore();
-
 
 
         string title, category;
@@ -43,6 +49,7 @@ public:
             cout << "\n";
 
             data.emplace_back(title, category, duration, size);
+            writeToFile(data);
         }
 
     }
@@ -59,11 +66,11 @@ public:
     }
 
     void searchListOfVideos() {
-        //vale while gia na deixnei sunexeia th lista panw
+//vale na vriskeis me vash to index
         int choice;
         string keyword;
         while (true) {
-            cout << "0.Exit || 1.Search by Title || 2. Search by Category\n\n";
+            cout << "0.Exit || 1.Search by Title || 2. Search by Category || 3. Search by Index\n\n";
             cout << "Enter number: ";
             cin >> choice;
             cin.ignore();
@@ -71,7 +78,6 @@ public:
                 return;
             }
             if (choice == 1) {
-//                cin.ignore();
                 cout << "Enter keyword: ";
                 getline(cin, keyword);
                 for (int i = 0; i < data.size(); i++) {
@@ -81,7 +87,6 @@ public:
                 }
 
             } else if (choice == 2) {
-//                cin.ignore();
                 cout << "Enter keyword: ";
                 getline(cin, keyword);
                 for (int i = 0; i < data.size(); i++) {
@@ -89,6 +94,13 @@ public:
                         cout << data[i] << endl;
                     }
                 }
+            }
+            else if (choice == 3) {
+                int index;
+                cout << "Find by which index? ";
+                cin >> index;
+                cin.ignore();
+                cout << data[index] << endl;
 
 
             }
@@ -170,7 +182,8 @@ public:
     void menu() {
         while (true) {
             int choice;
-            cout << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video\n\n";
+            cout
+                    << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video || 6.Write to File\n\n";
             cout << "Enter number: ";
             cin >> choice;
 
@@ -201,6 +214,10 @@ public:
                     cout << "Delete Video: \n";
                     deleteOneOrAll();
                     break;
+//                case 6:
+//                    cout << "Write to File: \n";
+//                    writeToFile();
+//                    break;
                 default:
                     cout << "Enter a number between 1 - 6\n";
                     break;
