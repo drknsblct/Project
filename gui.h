@@ -50,31 +50,36 @@ public:
     }
 
     void searchListOfVideos() {
+        //vale while gia na deixnei sunexeia th lista panw
         int choice;
-        string variable;
-        cout << "0.Exit || 1.Search by Title || 2. Search by Category || 3. Keyword Exists\n\n";
-        cout << "Enter number: ";
-        cin >> choice;
-        if (choice == 0) {
-            return;
-        }
-        if (choice == 1) {
-            cout << "Enter keyword: ";
-            cin >> variable;
-            cout << vids.findByTitle(variable);
-            return;
-        }
-        if (choice == 2) {
-            cout << "Enter keyword: ";
-            cin >> variable;
-            cout << vids.findByCategory(variable);
-            return;
-        }
-        if (choice == 3) {
-            cout << "Enter keyword: ";
-            cin >> variable;
-            cout << vids.exists(variable);
-            return;
+        string keyword;
+        while (true) {
+            cout << "0.Exit || 1.Search by Title || 2. Search by Category\n\n";
+            cout << "Enter number: ";
+            cin >> choice;
+            if (choice == 0) {
+                return;
+            }
+            if (choice == 1) {
+                cout << "Enter keyword: ";
+                cin >> keyword;
+                for (int i = 0; i < data.size(); i++) {
+                    if (data[i].getTitle() == keyword) {
+                        cout << data[i] << endl;
+                    }
+                }
+
+            } else if (choice == 2) {
+                cout << "Enter keyword: ";
+                cin >> keyword;
+                for (int i = 0; i < data.size(); i++) {
+                    if (data[i].getCategory() == keyword) {
+                        cout << data[i] << endl;
+                    }
+                }
+
+
+            }
         }
     }
 
@@ -190,8 +195,6 @@ public:
         }
 
     }
-
-
 };
 
 
