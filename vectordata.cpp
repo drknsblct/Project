@@ -1,6 +1,6 @@
 #include "vectordata.h"
 
-void VectorVideoData::populate(string filename) {
+void VectorVideos::populate(string filename) {
     ifstream infile;
     VideoData obj;
     infile.open(filename.c_str());
@@ -11,24 +11,24 @@ void VectorVideoData::populate(string filename) {
     }
 }
 
-bool VectorVideoData::exists(string title) {
+bool VectorVideos::exists(string title) {
     for (auto & i : data)
         return (i.getTitle() == title);
 }
 
-VideoData &VectorVideoData::findByTitle(string title) {
+VideoData &VectorVideos::findByTitle(string title) {
     for (auto & i : data)
         if (i.getTitle() == title)
             return i;
 }
 
-VideoData &VectorVideoData::findByCategory(string title) {
+VideoData &VectorVideos::findByCategory(string title) {
     for (auto & i : data)
         if (i.getCategory() == title)
             return i;
 }
 
-ostream &operator<<(ostream &out, VectorVideoData &vector) {
+ostream &operator<<(ostream &out, VectorVideos &vector) {
     for (auto & i : vector.data)
         out << i << endl;
     return out;

@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class VectorVideoData {
+class VectorVideos {
 
 public:
     vector<VideoData> data;
@@ -22,7 +22,7 @@ public:
 
     VideoData &findByCategory(string title);
 
-    friend ostream &operator<<(ostream &out, VectorVideoData &vector);
+    friend ostream &operator<<(ostream &out, VectorVideos &vector);
 };
 
 

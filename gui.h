@@ -10,7 +10,7 @@ using namespace std;
 class Gui {
 public:
     vector<VideoData> data;
-    VectorVideoData
+    VectorVideos vids; //exei provlhma
 
     void addVideos() {
         int count = 0;
@@ -49,7 +49,36 @@ public:
         }
     }
 
-    void deleteOneOrAll() {
+    void searchListOfVideos() {
+        int choice;
+        string variable;
+        cout << "0.Exit || 1.Search by Title || 2. Search by Category || 3. Keyword Exists\n\n";
+        cout << "Enter number: ";
+        cin >> choice;
+        if (choice == 0) {
+            return;
+        }
+        if (choice == 1) {
+            cout << "Enter keyword: ";
+            cin >> variable;
+            cout << vids.findByTitle(variable);
+            return;
+        }
+        if (choice == 2) {
+            cout << "Enter keyword: ";
+            cin >> variable;
+            cout << vids.findByCategory(variable);
+            return;
+        }
+        if (choice == 3) {
+            cout << "Enter keyword: ";
+            cin >> variable;
+            cout << vids.exists(variable);
+            return;
+        }
+    }
+
+    void deleteOneOrAll() { //dokimase na vgaleis ta return apo to 1 kai meta
         int choice;
         cout << "0.Exit || 1.Delete Last Video || 2.Delete Index || 3.Delete All\n\n";
         cout << "Enter number: ";
@@ -59,56 +88,59 @@ public:
         }
         if (choice == 1) {
             data.pop_back();
+            cout << "Deleted last video\n";
             return;
         }
         if (choice == 2) {
             int index;
             cout << "Which index to erase? ";
             cin >> index;
-            data.erase(data.begin()+index);
+            data.erase(data.begin() + index);
+            cout << "Deleted index[" << index << "]\n";
             return;
         }
         if (choice == 3) {
             data.clear();
             return;
-        }
-        else {
+        } else {
             cout << "Enter a number between 1 - 2 or 0 to exit";
         }
     }
 
-    int totalMinutes(){
+    int totalMinutes() {
         int total = 0;
-        for (VideoData &e : data){
+        for (VideoData &e : data) {
             total += e.getDuration();
         }
         return total;
     }
 
-    int totalSize(){
+    int totalSize() {
         int total = 0;
-        for (VideoData &e : data){
+        for (VideoData &e : data) {
             total += e.getSize();
         }
         return total;
     }
-    int averageSize(){
-        int avg = 0;
-        for (VideoData &e : data){
-            avg = totalSize() / data.size();
+
+    double averageSize() {
+        double avg = 0;
+        for (VideoData &e : data) {
+            avg = (double) totalSize() / data.size();
+        }
+        return avg;
+
+    }
+
+    double averageDuration() {
+        double avg = 0;
+        for (VideoData &e : data) {
+            avg = (double) totalMinutes() / data.size();
         }
         return avg;
     }
 
-    int averageDuration(){
-        int avg = 0;
-        for (VideoData &e : data){
-            avg = totalMinutes() / data.size();
-        }
-        return avg;
-    }
-
-    void showStats(){
+    void showStats() {
         cout << "Videos in the list: " << data.size() << "\n";
         cout << "Total minutes: " << totalMinutes() << "\n";
         cout << "Total size: " << totalSize() << "\n";
@@ -141,6 +173,7 @@ public:
                     break;
                 case 3:
                     cout << "Search: \n";
+                    searchListOfVideos();
                     break;
                 case 4:
                     cout << "Stats: \n";
