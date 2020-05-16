@@ -19,6 +19,8 @@ public:
         int count = 0;
         cout << "Enter the amount of videos you want to add: ";
         cin >> count;
+        cin.ignore();
+
 
 
         string title, category;
@@ -27,13 +29,17 @@ public:
         for (int i = 0; i < count; i++) {
             cout << "\t\t\t\t\t\t\t\tVideo " << i + 1 << "\n";
             cout << "Title: ";
-            cin >> title;
+            getline(cin, title);
+
             cout << "Category: ";
-            cin >> category;
+            getline(cin, category);
+
             cout << "Duration (min): ";
             cin >> duration;
+
             cout << "Size (mb): ";
             cin >> size;
+            cin.ignore();
             cout << "\n";
 
             data.emplace_back(title, category, duration, size);
@@ -60,12 +66,14 @@ public:
             cout << "0.Exit || 1.Search by Title || 2. Search by Category\n\n";
             cout << "Enter number: ";
             cin >> choice;
+            cin.ignore();
             if (choice == 0) {
                 return;
             }
             if (choice == 1) {
+//                cin.ignore();
                 cout << "Enter keyword: ";
-                cin >> keyword;
+                getline(cin, keyword);
                 for (int i = 0; i < data.size(); i++) {
                     if (data[i].getTitle() == keyword) {
                         cout << data[i] << endl;
@@ -73,8 +81,9 @@ public:
                 }
 
             } else if (choice == 2) {
+//                cin.ignore();
                 cout << "Enter keyword: ";
-                cin >> keyword;
+                getline(cin, keyword);
                 for (int i = 0; i < data.size(); i++) {
                     if (data[i].getCategory() == keyword) {
                         cout << data[i] << endl;
