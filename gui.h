@@ -19,6 +19,15 @@ public:
         }
     }
 
+    void readFromFile() {
+        ifstream file("videos.txt");
+        string line;
+        while (file >> line) {
+            getline(file, line);
+            cout << line << "\n\n";
+        }
+    }
+
     void addVideos() {
         int count = 0;
         cout << "Enter the amount of videos you want to add: ";
@@ -76,18 +85,18 @@ public:
             if (choice == 1) {
                 cout << "Enter keyword: ";
                 getline(cin, keyword);
-                for (int i = 0; i < data.size(); i++) {
-                    if (data[i].getTitle() == keyword) {
-                        cout << data[i] << endl;
+                for (auto & i : data) {
+                    if (i.getTitle() == keyword) {
+                        cout << i << endl;
                     }
                 }
 
             } else if (choice == 2) {
                 cout << "Enter keyword: ";
                 getline(cin, keyword);
-                for (int i = 0; i < data.size(); i++) {
-                    if (data[i].getCategory() == keyword) {
-                        cout << data[i] << endl;
+                for (auto & i : data) {
+                    if (i.getCategory() == keyword) {
+                        cout << i << endl;
                     }
                 }
             } else if (choice == 3) {
@@ -95,7 +104,7 @@ public:
                 cout << "Find by which index? ";
                 cin >> index;
                 cin.ignore();
-                if (index == data.size()){
+                if (index == data.size()) {
                     cout << "There's no such index\n\n";
                     return;
                 }
@@ -211,6 +220,10 @@ public:
                     cout << "Delete Video: \n";
                     deleteOneOrAll();
                     break;
+                case 6:
+                    cout << "Read from File: \n";
+                    readFromFile();
+                    break;
                 default:
                     cout << "Enter a number between 1 - 6\n";
                     break;
@@ -219,7 +232,7 @@ public:
 
     }
 
-    void nameTemplate(){
+    void nameTemplate() {
         string name = R"(
 
 
