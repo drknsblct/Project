@@ -4,13 +4,16 @@
 #include <iostream>
 #include "videodata.h"
 #include "vectordata.h"
+#include <fstream>
 
 using namespace std;
 
 class Gui {
 public:
     vector<VideoData> data;
-    VectorVideos vids; //exei provlhma
+//    ifstream  infile;
+//    infile.open(videos.txt);
+
 
     void addVideos() {
         int count = 0;
@@ -102,6 +105,7 @@ public:
             cin >> index;
             data.erase(data.begin() + index);
             cout << "Deleted index[" << index << "]\n";
+            //den 3erw an einai xrhsimo to return
             return;
         }
         if (choice == 3) {
