@@ -150,33 +150,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-vectordata.o: vectordata.cpp.o
-
-.PHONY : vectordata.o
-
-# target to build an object file
-vectordata.cpp.o:
-	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/vectordata.cpp.o
-.PHONY : vectordata.cpp.o
-
-vectordata.i: vectordata.cpp.i
-
-.PHONY : vectordata.i
-
-# target to preprocess a source file
-vectordata.cpp.i:
-	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/vectordata.cpp.i
-.PHONY : vectordata.cpp.i
-
-vectordata.s: vectordata.cpp.s
-
-.PHONY : vectordata.s
-
-# target to generate assembly for a file
-vectordata.cpp.s:
-	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/vectordata.cpp.s
-.PHONY : vectordata.cpp.s
-
 videodata.o: videodata.cpp.o
 
 .PHONY : videodata.o
@@ -216,9 +189,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... vectordata.o"
-	@echo "... vectordata.i"
-	@echo "... vectordata.s"
 	@echo "... videodata.o"
 	@echo "... videodata.i"
 	@echo "... videodata.s"

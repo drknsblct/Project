@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include "videodata.h"
-#include "vectordata.h"
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
@@ -66,7 +66,6 @@ public:
     }
 
     void searchListOfVideos() {
-//vale na vriskeis me vash to index
         int choice;
         string keyword;
         while (true) {
@@ -94,14 +93,16 @@ public:
                         cout << data[i] << endl;
                     }
                 }
-            }
-            else if (choice == 3) {
+            } else if (choice == 3) {
                 int index;
                 cout << "Find by which index? ";
                 cin >> index;
                 cin.ignore();
+                if (index == data.size()){
+                    cout << "There's no such index\n";
+                    break;
+                }
                 cout << data[index] << endl;
-
 
             }
         }
@@ -182,8 +183,7 @@ public:
     void menu() {
         while (true) {
             int choice;
-            cout
-                    << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video || 6.Write to File\n\n";
+            cout << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video\n\n";
             cout << "Enter number: ";
             cin >> choice;
 
@@ -214,10 +214,6 @@ public:
                     cout << "Delete Video: \n";
                     deleteOneOrAll();
                     break;
-//                case 6:
-//                    cout << "Write to File: \n";
-//                    writeToFile();
-//                    break;
                 default:
                     cout << "Enter a number between 1 - 6\n";
                     break;

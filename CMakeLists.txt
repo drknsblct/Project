@@ -3,4 +3,4 @@ project(Project)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Project main.cpp vectordata.cpp vectordata.h videodata.cpp videodata.h gui.h)
+add_executable(Project main.cpp videodata.cpp videodata.h gui.h)

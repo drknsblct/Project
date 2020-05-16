@@ -28,19 +28,4 @@ int VideoData::getSize() {
     return this->size;
 }
 
-//Setters
-void VideoData::setTitle(string newTitle){
-    this->title = newTitle;
-}
 
-void VideoData::setCategory(string newCategory){
-    this->category = newCategory;
-}
-
-void VideoData::setDuration(int newDuration){
-    this->duration = newDuration;
-}
-
-void VideoData::setSize(int newSize){
-    this->size = newSize;
-}

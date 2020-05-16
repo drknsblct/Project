@@ -1,6 +1,4 @@
-Title: Twice || Category: Kpop || Duration (min): 100 || Size (mb): 20
+Title: twice || Category: kpop || Duration (min): 132231 || Size (mb): 2123
 
-Title: Loona || Category: Kpop || Duration (min): 1000 || Size (mb): 200
-
-Title: Blackpink || Category: Kpop || Duration (min): 20 || Size (mb): 300
+Title: blackpink || Category: kpop || Duration (min): 213432 || Size (mb): 231
 

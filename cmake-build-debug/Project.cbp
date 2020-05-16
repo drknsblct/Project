@@ -88,12 +88,6 @@
 		<Unit filename="/Users/blackout/Project/main.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="/Users/blackout/Project/vectordata.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="/Users/blackout/Project/vectordata.h">
-			<Option target="Project"/>
-		</Unit>
 		<Unit filename="/Users/blackout/Project/videodata.cpp">
 			<Option target="Project"/>
 		</Unit>

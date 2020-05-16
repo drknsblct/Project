@@ -2,7 +2,6 @@
 #define PROJECT_VIDEODATA_H
 
 #include <iostream>
-#include <fstream>
 
 using namespace std;
 
@@ -17,7 +16,7 @@ private:
 public:
     VideoData();
 
-    explicit VideoData(string title, string category = "None", int duration = 0, int size = 0);
+    VideoData(string title, string category = "None", int duration = 0, int size = 0);
 
 //Getters
     string getTitle();
@@ -27,15 +26,6 @@ public:
     int getDuration();
 
     int getSize();
-
-//Setters
-    void setTitle(string newTitle);
-
-    void setCategory(string newCategory);
-
-    void setDuration(int newDuration);
-
-    void setSize(int newSize);
 
 
     friend istream &operator>>(istream &in, VideoData &data) {

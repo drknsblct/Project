@@ -3,12 +3,7 @@
 
 CMakeFiles/Project.dir/main.cpp.o: ../gui.h
 CMakeFiles/Project.dir/main.cpp.o: ../main.cpp
-CMakeFiles/Project.dir/main.cpp.o: ../vectordata.h
 CMakeFiles/Project.dir/main.cpp.o: ../videodata.h
-
-CMakeFiles/Project.dir/vectordata.cpp.o: ../vectordata.cpp
-CMakeFiles/Project.dir/vectordata.cpp.o: ../vectordata.h
-CMakeFiles/Project.dir/vectordata.cpp.o: ../videodata.h
 
 CMakeFiles/Project.dir/videodata.cpp.o: ../videodata.cpp
 CMakeFiles/Project.dir/videodata.cpp.o: ../videodata.h
