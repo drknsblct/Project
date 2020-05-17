@@ -97,7 +97,7 @@ public:
                 getline(cin, keyword);
                 for (auto &i : data) {
                     if (i.getCategory() == keyword) {
-                        cout << "\n" << i << endl;
+                        cout << i << endl;
                     }
                 }
             } else if (choice == 3) {
@@ -125,7 +125,7 @@ public:
         }
         if (choice == 1) {
             data.pop_back();
-            cout << "Deleted last video\n";
+            cout << "Deleted last video\n\n";
             return;
         }
         if (choice == 2) {
@@ -134,14 +134,14 @@ public:
             cin >> index;
             data.erase(data.begin() + index);
             cout << "Deleted index[" << index << "]\n";
-            //den 3erw an einai xrhsimo to return
             return;
         }
         if (choice == 3) {
             data.clear();
+            cout << "Deleted all videos\n";
             return;
         } else {
-            cout << "Enter a number between 1 - 2 or 0 to exit";
+            cout << "Enter a number between 1 - 2 or 0 to exit\n";
         }
     }
 //totalMinutes, totalSize, averageSize, averageDuration, longestVideo, shortestVideo,
@@ -294,6 +294,16 @@ public:
 | $$  | $$| $$      | $$_  $$ | $$  | $$ \____  $$| $$  | $$| $$| $$        | $$ /$$
 | $$$$$$$/| $$      | $$ \  $$| $$  | $$ /$$$$$$$/| $$$$$$$/| $$|  $$$$$$$  |  $$$$/
 |_______/ |__/      |__/  \__/|__/  |__/|_______/ |_______/ |__/ \_______/   \___/
+  /$$$$$$    /$$     /$$    /$$$$$$$$                  /$$
+ /$$__  $$  | $$    | $$   |__  $$__/                 | $$
+| $$  \ $$ /$$$$$$  | $$$$$$$ | $$  /$$$$$$   /$$$$$$$| $$$$$$$
+| $$$$$$$$|_  $$_/  | $$__  $$| $$ /$$__  $$ /$$_____/| $$__  $$
+| $$__  $$  | $$    | $$  \ $$| $$| $$$$$$$$| $$      | $$  \ $$
+| $$  | $$  | $$ /$$| $$  | $$| $$| $$_____/| $$      | $$  | $$
+| $$  | $$  |  $$$$/| $$  | $$| $$|  $$$$$$$|  $$$$$$$| $$  | $$
+|__/  |__/   \___/  |__/  |__/|__/ \_______/ \_______/|__/  |__/
+
+
 
 
 
