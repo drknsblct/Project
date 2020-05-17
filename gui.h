@@ -39,7 +39,7 @@ public:
         int duration, size;
 
         for (int i = 0; i < count; i++) {
-            cout << "\t\t\t\t\t\t\t\tVideo " << i + 1 << "\n";
+            cout << "\t\t\t\tVideo " << i + 1 << "\n";
             cout << "Title: ";
             getline(cin, title);
 
@@ -85,7 +85,7 @@ public:
             if (choice == 1) {
                 cout << "Enter keyword: ";
                 getline(cin, keyword);
-                for (auto & i : data) {
+                for (auto &i : data) {
                     if (i.getTitle() == keyword) {
                         cout << i << endl;
                     }
@@ -94,7 +94,7 @@ public:
             } else if (choice == 2) {
                 cout << "Enter keyword: ";
                 getline(cin, keyword);
-                for (auto & i : data) {
+                for (auto &i : data) {
                     if (i.getCategory() == keyword) {
                         cout << i << endl;
                     }
@@ -189,7 +189,8 @@ public:
     void menu() {
         while (true) {
             int choice;
-            cout << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video\n\n";
+            cout
+                    << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video || 6.Read from File\n\n";
             cout << "Enter number: ";
             cin >> choice;
 
