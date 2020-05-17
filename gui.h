@@ -39,7 +39,7 @@ public:
         int duration, size;
 
         for (int i = 0; i < count; i++) {
-            cout << "\t\t\t\tVideo " << i + 1 << "\n";
+            cout << "Video " << i + 1 << "\n";
             cout << "Title: ";
             getline(cin, title);
 
@@ -177,12 +177,59 @@ public:
         return avg;
     }
 
+    int longestVideo(){
+        int longest = data[0].getDuration();
+        for (int i = 1; i < data.size(); i++){
+            if (data[i].getDuration() > longest){
+                longest = data[i].getDuration();
+            }
+        }
+        return longest;
+    }
+
+    int shortestVideo(){
+        int shortest = data[0].getDuration();
+        for (int i = 1; i < data.size(); i++){
+            if (data[i].getDuration() < shortest){
+                shortest = data[i].getDuration();
+            }
+        }
+        return shortest;
+    }
+
+    int largestVideo(){
+        int largest = data[0].getSize();
+        for (int i = 1; i < data.size(); i++){
+            if (data[i].getSize() > largest){
+                largest = data[i].getSize();
+            }
+        }
+        return largest;
+    }
+
+    int smallestVideo(){
+        int smallest = data[0].getSize();
+        for (int i = 1; i < data.size(); i++){
+            if (data[i].getSize() < smallest){
+                smallest = data[i].getSize();
+            }
+        }
+        return smallest;
+    }
+
+
+
     void showStats() {
-        cout << "Videos in the list: " << data.size() << "\n";
-        cout << "Total minutes: " << totalMinutes() << "\n";
-        cout << "Total size: " << totalSize() << "\n";
-        cout << "Average duration: " << averageDuration() << "\n";
-        cout << "Average size: " << averageSize() << "\n";
+        cout << "Videos in the list: " << data.size() << "\n\n";
+        cout << "Total minutes: " << totalMinutes() << "\n\n";
+        cout << "Total size: " << totalSize() << "\n\n";
+        cout << "Average duration: " << averageDuration() << "\n\n";
+        cout << "Average size: " << averageSize() << "\n\n";
+
+        cout << "Longest video duration: " << longestVideo() << "\n\n";
+        cout << "Shortest video duration: " << shortestVideo() << "\n\n";
+        cout << "Largest video size: " << largestVideo() << "\n\n";
+        cout << "Smallest video size: " << smallestVideo() << "\n\n";
     }
 
 
