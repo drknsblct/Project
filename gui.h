@@ -257,7 +257,7 @@ public:
                 case 2:
                     cout << "List Videos: \n\n";
                     listVideos();
-                    cout << "\n\n";
+                    cout << "\n";
                     break;
                 case 3:
                     cout << "Search: \n\n";
