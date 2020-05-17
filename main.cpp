@@ -4,7 +4,7 @@ int main() {
 
     Gui gui;
 
-//    gui.nameTemplate();
+    gui.nameTemplate();
 
     gui.menu();
 

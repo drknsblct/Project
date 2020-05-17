@@ -88,7 +88,7 @@ public:
                 getline(cin, keyword);
                 for (auto &i : data) {
                     if (i.getTitle() == keyword) {
-                        cout << "\n" << i << endl;
+                        cout << "\n" << i << "\n";
                     }
                 }
 
@@ -97,7 +97,7 @@ public:
                 getline(cin, keyword);
                 for (auto &i : data) {
                     if (i.getCategory() == keyword) {
-                        cout << i << endl;
+                        cout << i << "\n";
                     }
                 }
             } else if (choice == 3) {
@@ -109,13 +109,13 @@ public:
                     cout << "\n" << "There's no such index\n\n";
                     return;
                 }
-                cout << "\n" << data[index] << endl;
+                cout << "\n" << data[index] << "\n";
 
             }
         }
     }
 //Deletes videos based on last entry, index, all
-    void deleteOneOrAll() { //dokimase na vgaleis ta return apo to 1 kai meta
+    void deleteOneOrAll() {
         int choice;
         cout << "0.Exit || 1.Delete Last Video || 2.Delete Index || 3.Delete All\n\n";
         cout << "Enter number: ";
@@ -126,22 +126,25 @@ public:
         if (choice == 1) {
             data.pop_back();
             cout << "Deleted last video\n\n";
-            return;
+
         }
-        if (choice == 2) {
+        else if (choice == 2) {
             int index;
             cout << "Which index to erase? ";
             cin >> index;
+            if (index == data.size() || index > data.size()){
+                cout << "There's no such index\n\n";
+            }
             data.erase(data.begin() + index);
-            cout << "Deleted index[" << index << "]\n";
-            return;
+            cout << "Deleted index[" << index << "]\n\n";
+
         }
-        if (choice == 3) {
+        else if (choice == 3) {
             data.clear();
-            cout << "Deleted all videos\n";
+            cout << "Deleted all videos\n\n";
             return;
         } else {
-            cout << "Enter a number between 1 - 2 or 0 to exit\n";
+            cout << "Enter a number between 1 - 2 or 0 to exit\n\n";
         }
     }
 //totalMinutes, totalSize, averageSize, averageDuration, longestVideo, shortestVideo,
@@ -281,11 +284,7 @@ public:
     }
 //Logo
     void nameTemplate() {
-        string name = R"(
-
-
-
-
+        string nameA = R"(
  /$$$$$$$            /$$                           /$$       /$$             /$$
 | $$__  $$          | $$                          | $$      | $$            | $$
 | $$  \ $$  /$$$$$$ | $$   /$$ /$$$$$$$   /$$$$$$$| $$$$$$$ | $$  /$$$$$$$ /$$$$$$
@@ -302,14 +301,22 @@ public:
 | $$  | $$  | $$ /$$| $$  | $$| $$| $$_____/| $$      | $$  | $$
 | $$  | $$  |  $$$$/| $$  | $$| $$|  $$$$$$$|  $$$$$$$| $$  | $$
 |__/  |__/   \___/  |__/  |__/|__/ \_______/ \_______/|__/  |__/
+        )";
 
-
-
-
+        string nameB = R"(
+ /$$$$$$$            /$$                           /$$       /$$             /$$
+| $$__  $$          | $$                          | $$      | $$            | $$
+| $$  \ $$  /$$$$$$ | $$   /$$ /$$$$$$$   /$$$$$$$| $$$$$$$ | $$  /$$$$$$$ /$$$$$$
+| $$  | $$ /$$__  $$| $$  /$$/| $$__  $$ /$$_____/| $$__  $$| $$ /$$_____/|_  $$_/
+| $$  | $$| $$  \__/| $$$$$$/ | $$  \ $$|  $$$$$$ | $$  \ $$| $$| $$        | $$
+| $$  | $$| $$      | $$_  $$ | $$  | $$ \____  $$| $$  | $$| $$| $$        | $$ /$$
+| $$$$$$$/| $$      | $$ \  $$| $$  | $$ /$$$$$$$/| $$$$$$$/| $$|  $$$$$$$  |  $$$$/
+|_______/ |__/      |__/  \__/|__/  |__/|_______/ |_______/ |__/ \_______/   \___/
 
         )";
 
-        cout << name << endl;
+        cout << nameB << "\n";
+
 
     }
 };
