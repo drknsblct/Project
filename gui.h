@@ -39,7 +39,7 @@ public:
         int duration, size;
 
         for (int i = 0; i < count; i++) {
-            cout << "Video " << i + 1 << "\n";
+            cout << "\nVideo " << i + 1 << "\n";
             cout << "Title: ";
             getline(cin, title);
 
@@ -87,7 +87,7 @@ public:
                 getline(cin, keyword);
                 for (auto &i : data) {
                     if (i.getTitle() == keyword) {
-                        cout << i << endl;
+                        cout << "\n" << i << endl;
                     }
                 }
 
@@ -96,7 +96,7 @@ public:
                 getline(cin, keyword);
                 for (auto &i : data) {
                     if (i.getCategory() == keyword) {
-                        cout << i << endl;
+                        cout << "\n" << i << endl;
                     }
                 }
             } else if (choice == 3) {
@@ -104,11 +104,11 @@ public:
                 cout << "Find by which index? ";
                 cin >> index;
                 cin.ignore();
-                if (index == data.size()) {
-                    cout << "There's no such index\n\n";
+                if (index == data.size() || index > data.size()) {
+                    cout << "\n" <<"There's no such index\n\n";
                     return;
                 }
-                cout << data[index] << endl;
+                cout << "\n" <<data[index] << endl;
 
             }
         }
@@ -177,40 +177,40 @@ public:
         return avg;
     }
 
-    int longestVideo(){
+    int longestVideo() {
         int longest = data[0].getDuration();
-        for (int i = 1; i < data.size(); i++){
-            if (data[i].getDuration() > longest){
+        for (int i = 1; i < data.size(); i++) {
+            if (data[i].getDuration() > longest) {
                 longest = data[i].getDuration();
             }
         }
         return longest;
     }
 
-    int shortestVideo(){
+    int shortestVideo() {
         int shortest = data[0].getDuration();
-        for (int i = 1; i < data.size(); i++){
-            if (data[i].getDuration() < shortest){
+        for (int i = 1; i < data.size(); i++) {
+            if (data[i].getDuration() < shortest) {
                 shortest = data[i].getDuration();
             }
         }
         return shortest;
     }
 
-    int largestVideo(){
+    int largestVideo() {
         int largest = data[0].getSize();
-        for (int i = 1; i < data.size(); i++){
-            if (data[i].getSize() > largest){
+        for (int i = 1; i < data.size(); i++) {
+            if (data[i].getSize() > largest) {
                 largest = data[i].getSize();
             }
         }
         return largest;
     }
 
-    int smallestVideo(){
+    int smallestVideo() {
         int smallest = data[0].getSize();
-        for (int i = 1; i < data.size(); i++){
-            if (data[i].getSize() < smallest){
+        for (int i = 1; i < data.size(); i++) {
+            if (data[i].getSize() < smallest) {
                 smallest = data[i].getSize();
             }
         }
@@ -218,17 +218,16 @@ public:
     }
 
 
-
     void showStats() {
-        cout << "Videos in the list: " << data.size() << "\n\n";
-        cout << "Total minutes: " << totalMinutes() << "\n\n";
+        cout << "Videos in the list: " << data.size() << "\n";
+        cout << "Total minutes: " << totalMinutes() << "\n";
         cout << "Total size: " << totalSize() << "\n\n";
-        cout << "Average duration: " << averageDuration() << "\n\n";
+        cout << "Average duration: " << averageDuration() << "\n";
         cout << "Average size: " << averageSize() << "\n\n";
 
-        cout << "Longest video duration: " << longestVideo() << "\n\n";
+        cout << "Longest video duration: " << longestVideo() << "\n";
         cout << "Shortest video duration: " << shortestVideo() << "\n\n";
-        cout << "Largest video size: " << largestVideo() << "\n\n";
+        cout << "Largest video size: " << largestVideo() << "\n";
         cout << "Smallest video size: " << smallestVideo() << "\n\n";
     }
 
@@ -236,8 +235,7 @@ public:
     void menu() {
         while (true) {
             int choice;
-            cout
-                    << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video || 6.Read from File\n\n";
+            cout << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video || 6.Read from File\n\n";
             cout << "Enter number: ";
             cin >> choice;
 
@@ -247,33 +245,32 @@ public:
 
             switch (choice) {
                 case 1:
-                    cout << "Add Videos: \n";
+                    cout << "Add Videos: \n\n";
                     addVideos();
                     break;
                 case 2:
-                    cout << "List Videos: \n\n\n";
+                    cout << "List Videos: \n\n";
                     listVideos();
-                    //Nea grammh h apo katw
                     cout << "\n\n";
                     break;
                 case 3:
-                    cout << "Search: \n";
+                    cout << "Search: \n\n";
                     searchListOfVideos();
                     break;
                 case 4:
-                    cout << "Stats: \n";
+                    cout << "Stats: \n\n";
                     showStats();
                     break;
                 case 5:
-                    cout << "Delete Video: \n";
+                    cout << "Delete Video: \n\n";
                     deleteOneOrAll();
                     break;
                 case 6:
-                    cout << "Read from File: \n";
+                    cout << "Read from File: \n\n";
                     readFromFile();
                     break;
                 default:
-                    cout << "Enter a number between 1 - 6\n";
+                    cout << "Enter a number between 1 - 6\n\n";
                     break;
             }
         }
