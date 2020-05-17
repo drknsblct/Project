@@ -11,7 +11,7 @@ using namespace std;
 class Gui {
 public:
     vector<VideoData> data;
-
+//writeToFile and readFromFile are both methods used for reading and writing files
     void writeToFile(vector<VideoData> data) {
         ofstream file("videos.txt");
         for (auto &i : data) {
@@ -28,6 +28,7 @@ public:
         }
     }
 
+//Adds videos to memory and in video.txt file
     void addVideos() {
         int count = 0;
         cout << "Enter the amount of videos you want to add: ";
@@ -59,7 +60,7 @@ public:
         }
 
     }
-
+//Lists videos
     void listVideos() {
         for (VideoData &e : data) {
             cout << "Title: "
@@ -70,7 +71,7 @@ public:
                  << "\n\n";
         }
     }
-
+//Searches videos in memory
     void searchListOfVideos() {
         int choice;
         string keyword;
@@ -105,15 +106,15 @@ public:
                 cin >> index;
                 cin.ignore();
                 if (index == data.size() || index > data.size()) {
-                    cout << "\n" <<"There's no such index\n\n";
+                    cout << "\n" << "There's no such index\n\n";
                     return;
                 }
-                cout << "\n" <<data[index] << endl;
+                cout << "\n" << data[index] << endl;
 
             }
         }
     }
-
+//Deletes videos based on last entry, index, all
     void deleteOneOrAll() { //dokimase na vgaleis ta return apo to 1 kai meta
         int choice;
         cout << "0.Exit || 1.Delete Last Video || 2.Delete Index || 3.Delete All\n\n";
@@ -143,7 +144,8 @@ public:
             cout << "Enter a number between 1 - 2 or 0 to exit";
         }
     }
-
+//totalMinutes, totalSize, averageSize, averageDuration, longestVideo, shortestVideo,
+// largestVideo, smallestVideo are all used in the showStats method
     int totalMinutes() {
         int total = 0;
         for (VideoData &e : data) {
@@ -217,7 +219,7 @@ public:
         return smallest;
     }
 
-
+//Shows the stats of all inputed videos
     void showStats() {
         cout << "Videos in the list: " << data.size() << "\n";
         cout << "Total minutes: " << totalMinutes() << "\n";
@@ -231,11 +233,12 @@ public:
         cout << "Smallest video size: " << smallestVideo() << "\n\n";
     }
 
-
+//Home menu with showcasing different functionalities
     void menu() {
         while (true) {
             int choice;
-            cout << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video || 6.Read from File\n\n";
+            cout
+                    << "0.Exit || 1.Add Videos || 2.List Videos || 3.Search || 4.Stats || 5.Delete Video || 6.Read from File\n\n";
             cout << "Enter number: ";
             cin >> choice;
 
@@ -276,7 +279,7 @@ public:
         }
 
     }
-
+//Logo
     void nameTemplate() {
         string name = R"(
 
