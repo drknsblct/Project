@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Project.dir/gui.cpp.o"
   "CMakeFiles/Project.dir/main.cpp.o"
   "CMakeFiles/Project.dir/videodata.cpp.o"
   "Project"

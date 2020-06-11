@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/blackout/Project/main.cpp" "/Users/blackout/Project/cmake-build-debug/CMakeFiles/Project.dir/main.cpp.o"
-  "/Users/blackout/Project/videodata.cpp" "/Users/blackout/Project/cmake-build-debug/CMakeFiles/Project.dir/videodata.cpp.o"
+  "/Users/blackout/VideoLister/gui.cpp" "/Users/blackout/VideoLister/cmake-build-debug/CMakeFiles/Project.dir/gui.cpp.o"
+  "/Users/blackout/VideoLister/main.cpp" "/Users/blackout/VideoLister/cmake-build-debug/CMakeFiles/Project.dir/main.cpp.o"
+  "/Users/blackout/VideoLister/videodata.cpp" "/Users/blackout/VideoLister/cmake-build-debug/CMakeFiles/Project.dir/videodata.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

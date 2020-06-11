@@ -6,21 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/Users/blackout/Project/gui.h
+/Users/blackout/VideoLister/gui.cpp
 iostream
 -
 videodata.h
-/Users/blackout/Project/videodata.h
+/Users/blackout/VideoLister/videodata.h
+gui.h
+/Users/blackout/VideoLister/gui.h
+vector
+-
+
+/Users/blackout/VideoLister/gui.h
+iostream
+-
+videodata.h
+/Users/blackout/VideoLister/videodata.h
 fstream
 -
 vector
 -
 
-/Users/blackout/Project/main.cpp
-gui.h
-/Users/blackout/Project/gui.h
-
-/Users/blackout/Project/videodata.h
+/Users/blackout/VideoLister/videodata.h
 iostream
 -
 

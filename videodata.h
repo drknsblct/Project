@@ -3,48 +3,46 @@
 
 #include <iostream>
 
-using namespace std;
-
 class VideoData {
 private:
 
-    string title;
-    string category;
+    std::string title;
+    std::string category;
     int duration;
     int size;
 
 public:
     VideoData();
 
-    VideoData(string title, string category = "None", int duration = 0, int size = 0);
+    VideoData(std::string title, std::string category = "None", int duration = 0, int size = 0);
 
 //Getters
-    string getTitle();
+    std::string getTitle();
 
-    string getCategory();
+    std::string getCategory();
 
     int getDuration();
 
     int getSize();
 
 
-    friend istream &operator>>(istream &in, VideoData &data) {
-        cout << "Title: ";
+    friend std::istream &operator>>(std::istream &in, VideoData &data) {
+        std::cout << "Title: ";
         in >> data.title;
 
-        cout << "Category: ";
+        std::cout << "Category: ";
         in >> data.category;
 
-        cout << "Duration: ";
+        std::cout << "Duration: ";
         in >> data.duration;
 
-        cout << "Size: ";
+        std::cout << "Size: ";
         in >> data.size;
 
         return in;
     }
 
-    friend ostream &operator<<(ostream &out, VideoData &data) {
+    friend std::ostream &operator<<(std::ostream &out, VideoData &data) {
         return out << "Title: "
                    << data.title << " || Category: "
                    << data.category << " || Duration (min): "

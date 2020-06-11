@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/blackout/Project
+CMAKE_SOURCE_DIR = /Users/blackout/VideoLister
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/blackout/Project/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/blackout/VideoLister/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/blackout/Project/cmake-build-debug/CMakeFiles /Users/blackout/Project/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/blackout/VideoLister/cmake-build-debug/CMakeFiles /Users/blackout/VideoLister/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/blackout/Project/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/blackout/VideoLister/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ Project: cmake_check_build_system
 Project/fast:
 	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/build
 .PHONY : Project/fast
+
+gui.o: gui.cpp.o
+
+.PHONY : gui.o
+
+# target to build an object file
+gui.cpp.o:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/gui.cpp.o
+.PHONY : gui.cpp.o
+
+gui.i: gui.cpp.i
+
+.PHONY : gui.i
+
+# target to preprocess a source file
+gui.cpp.i:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/gui.cpp.i
+.PHONY : gui.cpp.i
+
+gui.s: gui.cpp.s
+
+.PHONY : gui.s
+
+# target to generate assembly for a file
+gui.cpp.s:
+	$(MAKE) -f CMakeFiles/Project.dir/build.make CMakeFiles/Project.dir/gui.cpp.s
+.PHONY : gui.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Project"
+	@echo "... gui.o"
+	@echo "... gui.i"
+	@echo "... gui.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/blackout/Project
+CMAKE_SOURCE_DIR = /Users/blackout/VideoLister
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/blackout/Project/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/blackout/VideoLister/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Project.dir/depend.make
@@ -59,43 +59,58 @@ include CMakeFiles/Project.dir/flags.make
 
 CMakeFiles/Project.dir/main.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/blackout/Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/main.cpp.o -c /Users/blackout/Project/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/blackout/VideoLister/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/main.cpp.o -c /Users/blackout/VideoLister/main.cpp
 
 CMakeFiles/Project.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/blackout/Project/main.cpp > CMakeFiles/Project.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/blackout/VideoLister/main.cpp > CMakeFiles/Project.dir/main.cpp.i
 
 CMakeFiles/Project.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/blackout/Project/main.cpp -o CMakeFiles/Project.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/blackout/VideoLister/main.cpp -o CMakeFiles/Project.dir/main.cpp.s
 
 CMakeFiles/Project.dir/videodata.cpp.o: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/videodata.cpp.o: ../videodata.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/blackout/Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project.dir/videodata.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/videodata.cpp.o -c /Users/blackout/Project/videodata.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/blackout/VideoLister/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project.dir/videodata.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/videodata.cpp.o -c /Users/blackout/VideoLister/videodata.cpp
 
 CMakeFiles/Project.dir/videodata.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/videodata.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/blackout/Project/videodata.cpp > CMakeFiles/Project.dir/videodata.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/blackout/VideoLister/videodata.cpp > CMakeFiles/Project.dir/videodata.cpp.i
 
 CMakeFiles/Project.dir/videodata.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/videodata.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/blackout/Project/videodata.cpp -o CMakeFiles/Project.dir/videodata.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/blackout/VideoLister/videodata.cpp -o CMakeFiles/Project.dir/videodata.cpp.s
+
+CMakeFiles/Project.dir/gui.cpp.o: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/gui.cpp.o: ../gui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/blackout/VideoLister/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project.dir/gui.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project.dir/gui.cpp.o -c /Users/blackout/VideoLister/gui.cpp
+
+CMakeFiles/Project.dir/gui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/gui.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/blackout/VideoLister/gui.cpp > CMakeFiles/Project.dir/gui.cpp.i
+
+CMakeFiles/Project.dir/gui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/gui.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/blackout/VideoLister/gui.cpp -o CMakeFiles/Project.dir/gui.cpp.s
 
 # Object files for target Project
 Project_OBJECTS = \
 "CMakeFiles/Project.dir/main.cpp.o" \
-"CMakeFiles/Project.dir/videodata.cpp.o"
+"CMakeFiles/Project.dir/videodata.cpp.o" \
+"CMakeFiles/Project.dir/gui.cpp.o"
 
 # External object files for target Project
 Project_EXTERNAL_OBJECTS =
 
 Project: CMakeFiles/Project.dir/main.cpp.o
 Project: CMakeFiles/Project.dir/videodata.cpp.o
+Project: CMakeFiles/Project.dir/gui.cpp.o
 Project: CMakeFiles/Project.dir/build.make
 Project: CMakeFiles/Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/blackout/Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/blackout/VideoLister/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +123,6 @@ CMakeFiles/Project.dir/clean:
 .PHONY : CMakeFiles/Project.dir/clean
 
 CMakeFiles/Project.dir/depend:
-	cd /Users/blackout/Project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/blackout/Project /Users/blackout/Project /Users/blackout/Project/cmake-build-debug /Users/blackout/Project/cmake-build-debug /Users/blackout/Project/cmake-build-debug/CMakeFiles/Project.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/blackout/VideoLister/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/blackout/VideoLister /Users/blackout/VideoLister /Users/blackout/VideoLister/cmake-build-debug /Users/blackout/VideoLister/cmake-build-debug /Users/blackout/VideoLister/cmake-build-debug/CMakeFiles/Project.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Project.dir/depend
 
