@@ -1,0 +1,2 @@
+Compile in terminal with this command:
+g++ main.cpp gui.cpp videodata.cpp -std=c++11
