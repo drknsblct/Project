@@ -1,2 +1,4 @@
 Compile in terminal with this command:
 g++ main.cpp gui.cpp videodata.cpp -std=c++11
+
+https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
