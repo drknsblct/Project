@@ -48,7 +48,7 @@ public:
 //Shows the stats of all inputed videos
     void showStats();
 
-//Home menu with showcasing different functionalities
+//Home menu which showcases different functionalities
     void menu();
 
 //Logo
